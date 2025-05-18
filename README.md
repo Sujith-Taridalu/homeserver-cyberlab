@@ -1,8 +1,4 @@
-# homeserver-cyberlab
-A personal cybersecurity lab running on bare-metal Proxmox, built for long-term learning, red team/blue team simulations, and continuous experimentation in offensive and defensive security.
-
-
-# Sujith's Cybersecurity Home Lab – `homeserver-cyberlab`
+# Sujith's Cybersecurity Home Lab
 
 Welcome to my personal cybersecurity home lab — a virtualized environment built on bare-metal hardware using Proxmox VE. This lab is a long-term, evolving platform where I explore offensive and defensive security, simulate real-world attacks, test detection tools, and continuously sharpen my skills.
 
