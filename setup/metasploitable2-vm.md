@@ -9,8 +9,11 @@ This guide describes the steps I took to set up Metasploitable2 on my home serve
    - I unzipped the contents on my host machine.
 
 2. **Prepare Storage Directory on the Server**  
-   - I navigated to `/var/lib/vz/images` on my server.  
-   - I created a directory for the VM using the ID `103`:  
+   - I connected to my server using SSH (for those unfamiliar with this):  
+     ```bash
+     ssh root@192.168.1.200
+     ```
+   - Then, on the server, I navigated to `/var/lib/vz/images` and created a directory for the VM with ID `103`:  
      ```bash
      mkdir /var/lib/vz/images/103
      ```
