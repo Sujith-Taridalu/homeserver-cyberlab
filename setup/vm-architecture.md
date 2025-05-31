@@ -1,10 +1,27 @@
-# VM Architecture – Cybersecurity Home Lab
+# 🏗️ VM Architecture – Cybersecurity Home Lab
 
 This document outlines the virtual machines deployed inside Proxmox for my home lab environment. Each VM serves a specific purpose — from offensive testing to defensive detection and vulnerable service hosting.
 
 ---
 
-## 🔴 1. Kali Linux (Attacker Machine)
+## 🔐 1. Windows Server 2022 (Domain Controller)
+
+- **Purpose:** Domain Controller for Active Directory, DNS, GPOs
+- **OS:** Windows Server 2022 (Datacenter Evaluation)
+- **Specs:**
+  - 4 GB RAM
+  - 2 vCPU
+  - 60 GB disk
+- **Roles Installed:** Active Directory Domain Services (AD DS), DNS Server
+- **Domain Name:** win-server.local
+- **Network:** Bridged (`vmbr0`)
+- **IP:** 192.168.1.251
+
+📌 *This server manages centralized authentication and policy control across the lab.*
+
+---
+
+## 🔴 2. Kali Linux (Attacker Machine)
 
 - **Purpose:** Primary attack machine
 - **OS:** Kali Linux (2024.1)
@@ -18,7 +35,7 @@ This document outlines the virtual machines deployed inside Proxmox for my home 
 
 ---
 
-## 🔵 2. Windows 10 (Blue Team / Detection)
+## 🔵 3. Windows 10 (Blue Team / Detection)
 
 - **Purpose:** Logging and defensive analysis
 - **OS:** Windows 10 
@@ -29,10 +46,11 @@ This document outlines the virtual machines deployed inside Proxmox for my home 
 - **Tools:** Sysmon, Event Viewer, PowerShell logging, firewall rules
 - **Network:** Bridged (`vmbr0`)
 - **IP:** 192.168.1.109
+- **Additional Note:** Joined to the domain `win-server.local`, enabling domain authentication and policy enforcement.
 
 ---
 
-## ⚙️ 3. Ubuntu Server (Web Services & DVWA)
+## ⚙️ 4. Ubuntu Server (Web Services & DVWA)
 
 - **Purpose:** Host vulnerable web apps (DVWA, PHPMyAdmin)
 - **OS:** Ubuntu Server 22.04
@@ -46,7 +64,7 @@ This document outlines the virtual machines deployed inside Proxmox for my home 
 
 ---
 
-## 🎯 4. Metasploitable2 (Vulnerable Target)
+## 🎯 5. Metasploitable2 (Vulnerable Target)
 
 - **Purpose:** Intentionally vulnerable Linux system
 - **OS:** Ubuntu 8.04 (Metasploitable2)
@@ -64,17 +82,22 @@ This document outlines the virtual machines deployed inside Proxmox for my home 
 
 All VMs share the same Proxmox virtual bridge: `vmbr0`, simulating a LAN.
 
-| Machine         | IP Address       | Role            |
-|------------------|-------------------|------------------|
-| Kali Linux       | 192.168.1.30      | Attacker         |
-| Metasploitable2  | 192.168.1.154     | Vulnerable target|
-| Windows 10       | 192.168.1.109     | Blue team        |
-| Ubuntu Server    | 192.168.1.188     | DVWA host        |
+| Machine            | IP Address       | Role                          |
+|---------------------|-------------------|-------------------------------|
+| Windows Server 2022| 192.168.1.251     | Domain Controller (AD, DNS)   |
+| Kali Linux         | 192.168.1.30      | Attacker                      |
+| Windows 10         | 192.168.1.109     | Blue team (Domain-joined)     |
+| Ubuntu Server      | 192.168.1.188     | DVWA host                     |
+| Metasploitable2    | 192.168.1.154     | Vulnerable target             |
 
 ---
 
 ## 🧠 Notes
 
-- VMs are powered on/off based on lab scenarios
-- Kali, Windows, and Ubuntu were installed manually via ISO files  
-- Metasploitable2 was imported as a pre-built VM image (converted from VMDK to qcow2 for Proxmox, and then manually changing the configuration files)
+- VMs are powered on/off based on lab scenarios.
+- Kali, Windows, and Ubuntu were installed manually via ISO files.
+- Metasploitable2 was imported as a pre-built VM image (converted from VMDK to qcow2 for Proxmox, and then manually changing the configuration files).
+- Windows Server 2022 was installed from ISO, promoted to a Domain Controller, and configured for centralized authentication and DNS.
+- Windows 10 was successfully joined to the `win-server.local` domain, enabling GPO testing and domain-level authentication.
+
+---

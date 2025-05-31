@@ -13,6 +13,7 @@ Welcome to my personal cybersecurity home lab — a virtualized environment buil
   - 🎯 **Metasploitable2** – intentionally vulnerable target
   - 🔵 **Windows 10** – blue team/logging analysis
   - ⚙️ **Ubuntu Server** – hosts DVWA, web apps, and services
+  - 🔐 **Windows Server 2022** – Domain Controller (Active Directory, DNS, GPOs)
 
 ---
 
@@ -22,6 +23,8 @@ Welcome to my personal cybersecurity home lab — a virtualized environment buil
 - Simulate end-to-end attack chains and blue team responses
 - Host internal services (ad blockers, media servers, logging tools)
 - Build deep system and network-level knowledge
+- Centralize authentication and authorization with Active Directory
+- Experiment with Windows domain security and policy enforcement
 
 ---
 
@@ -38,6 +41,9 @@ Welcome to my personal cybersecurity home lab — a virtualized environment buil
 - Event log analysis on Windows (`Sysmon`, `Event Viewer`)
 - Linux monitoring via `auditd`, `ufw`, and `fail2ban`
 - Simulated detection and response
+- Active Directory configuration and management
+- Group Policy creation and enforcement
+- DNS troubleshooting and domain join processes
 
 ---
 
@@ -45,26 +51,19 @@ Welcome to my personal cybersecurity home lab — a virtualized environment buil
 
 - **Red Team:** Kali Linux, Metasploit, Hydra, Gobuster, SQLmap, Burp Suite
 - **Blue Team:** Wireshark, Sysmon, auditd, tcpdump, iptables, Windows Event Viewer
-- **Infrastructure:** Proxmox, virtual bridges, static IP networking
+- **Infrastructure:** Proxmox, virtual bridges, static IP networking, Windows Server 2022 (Active Directory)
 - **Web Security:** DVWA, Apache, MySQL, PHP
 
 ---
 
-## 🧰 Directory Structure (coming soon)
+## 🧰 Directory Structure
 
 ```
 /setup/                # VM configs, IPs, ISO details
 /attack-notes/         # Red team command logs, payloads, recon steps
 /defense-notes/        # Blue team logs, detections, scripts
-/screenshots/          # Screenshots of key attacks/detections
 /projects/             # Sub-projects like Pi-hole, Jellyfin, pfSense, etc.
 ```
-
----
-
-## 📸 Screenshots
-
-_(To be added soon — Metasploit sessions, Wireshark logs, DVWA tests)_
 
 ---
 
@@ -84,6 +83,8 @@ This lab is continuously evolving. Future upgrades include:
 - Dockerized service deployments
 - SIEM tools like Security Onion or Wazuh
 - Automated attack simulations
+- Advanced Active Directory configuration (multi-DC, hybrid AD with Azure)
+- Integrate Linux clients with Active Directory for authentication
 
 ---
 

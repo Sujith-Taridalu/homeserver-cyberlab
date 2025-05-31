@@ -1,50 +1,69 @@
-# Proxmox Installation – Sujith's Home Cybersecurity Lab
+# 🏗️ Proxmox VE Installation – Sujith's Home Cybersecurity Lab
 
-This document outlines the installation of **Proxmox VE** on my dedicated home server. It serves as the base hypervisor for my virtualized cybersecurity lab, used for red/blue team simulation and hands-on learning.
+This document outlines the installation of **Proxmox Virtual Environment (VE)** on my dedicated home server. Proxmox serves as the base hypervisor for my evolving **cybersecurity lab**, enabling virtualized red/blue team simulations, Active Directory testing, and hands-on security learning.
 
 ---
 
 ## 💻 Host Machine Specifications
 
-- **Model:** Dell Precision Tower 3620
-- **CPU:** 8 x Intel(R) Core(TM) i7-6700 @ 3.40GHz (1 Socket)
-- **RAM:** 32 GB DDR4
-- **Storage:**
-  - 512 GB SSD (OS + VMs)
-  - 2 TB HDD (Storage, logs, media)
-- **Network:** Ethernet (connected via router)
+| Component       | Details                                  |
+|------------------|------------------------------------------|
+| **Model**       | Dell Precision Tower 3620                |
+| **CPU**         | 8 x Intel(R) Core(TM) i7-6700 @ 3.40GHz |
+| **RAM**         | 32 GB DDR4                               |
+| **Storage**     | 512 GB SSD (OS + VMs) <br> 2 TB HDD (Storage, logs, media) |
+| **Network**     | Ethernet (via router, static IP)         |
 
 ---
 
-## 📥 ISO & Flashing
+## 📥 ISO Download & Flashing
 
-1. Downloaded the latest ISO from [Proxmox VE Downloads](https://www.proxmox.com/en/downloads)
-   - Filename used: `proxmox-ve_8.x.iso`
-
-2. Used [balenaEtcher](https://www.balena.io/etcher/) on macOS to flash the ISO to a USB drive.
+1. **Downloaded ISO** from [Proxmox VE Official Site](https://www.proxmox.com/en/downloads)  
+   - Filename: `proxmox-ve_8.x.iso`  
+2. **Flashed ISO** to USB using [balenaEtcher](https://www.balena.io/etcher/) (macOS)  
+   - Verified integrity of the flashed drive.
 
 ---
 
-## ⚙️ Installation Steps
+## ⚙️ Proxmox Installation Steps
 
-1. Booted the Dell server via USB
-2. Selected **Install Proxmox VE**
-3. Chose 512 GB SSD as the primary disk
-4. Network:
-   - Assigned static IP: `192.168.1.200/24`
+1. **Booted the server** from the Proxmox USB.
+2. Selected **"Install Proxmox VE"** at boot menu.
+3. Chose the **512 GB SSD** as the primary installation disk.
+4. Configured **network settings**:
+   - Static IP: `192.168.1.200/24`
    - Gateway: `192.168.1.1`
-   - DNS: `8.8.8.8`
-5. Hostname: `sujith-homelab`
-6. Completed installation and removed the USB
-7. Accessed the web interface from my laptop at:  
+   - DNS Server: `8.8.8.8`
+5. Set **Hostname**: `sujith-homelab`
+6. Completed installation, removed USB, and rebooted.
+7. Accessed **Proxmox Web Interface** from laptop:  
    [https://192.168.1.200:8006](https://192.168.1.200:8006)
 
 ---
 
 ## 🔐 Proxmox Admin Details
 
-- Web UI: [https://192.168.1.200:8006](https://192.168.1.200:8006)
-- Admin user: `root`
-- CLI access via SSH:
-  ```bash
-  ssh root@192.168.1.200
+- **Web UI Access**: [https://192.168.1.200:8006](https://192.168.1.200:8006)  
+- **Default Admin User**: `root`  
+- **Initial CLI Access via SSH**:
+    ```bash
+    ssh root@192.168.1.200
+    ```
+
+---
+
+## 🌐 Network Context
+
+- Proxmox server connects to the **same LAN** as my virtual lab machines via `vmbr0`.  
+- This setup enables seamless communication between VMs and external systems for lab purposes.
+
+---
+
+## 🔧 Why Proxmox?
+
+- **Open-source and powerful**: Supports KVM virtualization, LXC containers, and clustering.
+- **Web-based management**: Easy-to-use web GUI for managing VMs and resources.
+- **Perfect for home labs**: Scales well with available hardware, supports snapshots, backups, and bridged networking.
+
+---
+
