@@ -115,7 +115,7 @@ Here we complete the setup by initializing the database tables and ensuring all 
 
 ---
 
-## 📸 Screenshot (Add your own here)
+## 📸 Screenshot
 ![DVWA Setup Check Screenshot](../screenshots/dvwa.png)
 
 ---
