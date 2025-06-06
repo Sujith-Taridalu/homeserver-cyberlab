@@ -219,6 +219,8 @@ This data is useful during recon to identify:
 
 ![Host Command](../../../../../screenshots/passive-recon/Host.png)
 
+*Figure 1: Host Command Working*
+
 ### Important Note
 
 Some domains or hosting providers intentionally restrict detailed responses to `host -a` or `dig ANY` queries to reduce DNS data leakage. This is expected and not an error — just a form of DNS hardening.
