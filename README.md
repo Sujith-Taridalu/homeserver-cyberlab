@@ -33,7 +33,7 @@ Welcome to my personal cybersecurity home lab — a virtualized environment buil
 ### 🔴 Red Team Activities
 - Reconnaissance with `nmap`, `netdiscover`, and `whois`
 - Exploitation using `Metasploit`, `Hydra`, and manual techniques
-- Web vulnerability testing with `Burp Suite`, `DVWA`, SQL injection, XSS
+- Web vulnerability testing with `Burp Suite`, `Damn Vulnerable Web Application (DVWA)`, SQL injection, XSS
 - Reverse shells, brute force attacks, and privilege escalation
 
 ### 🔵 Blue Team Activities
