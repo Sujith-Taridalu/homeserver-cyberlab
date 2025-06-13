@@ -62,6 +62,7 @@ Welcome to my personal cybersecurity home lab — a virtualized environment buil
 /setup/                # VM configs, IPs, ISO details
 /attack-notes/         # Red team command logs, payloads, recon steps
 /defense-notes/        # Blue team logs, detections, scripts
+/screenshots/          # Proof of work
 /projects/             # Sub-projects like Pi-hole, Jellyfin, pfSense, etc.
 ```
 
