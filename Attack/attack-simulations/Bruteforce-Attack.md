@@ -72,7 +72,7 @@ hydra -l admin -P /usr/share/wordlists/rockyou.txt 192.168.1.188 http-post-form 
 
 After running the above command, Hydra identified multiple password candidates as valid. But DVWA is designed to accept only `admin : password` in this module.
 
-![Hydra Brute Force Output](../../screenshots/Bruteforce.png)
+![Hydra Brute Force Output](../../Screenshots/Bruteforce.png)
 
 *Figure 1: Hydra Results*
 
