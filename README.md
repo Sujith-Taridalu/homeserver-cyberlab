@@ -34,7 +34,9 @@ Welcome to my personal cybersecurity home lab — a virtualized environment buil
 - Reconnaissance with `nmap`, `netdiscover`, and `whois`
 - Exploitation using `Metasploit`, `Hydra`, and manual techniques
 - Web vulnerability testing with `Burp Suite`, `Damn Vulnerable Web Application (DVWA)`, SQL injection, XSS
-- Reverse shells, brute force attacks, and privilege escalation
+- 12 fully documented red team scenarios, including RCE, SQLi, MITM, and privilege escalation, executed against in-lab targets
+- Simulated end-to-end attack chains with custom and public exploits
+- Remote code execution via Metasploit modules and manual buffer overflows
 
 ### 🔵 Blue Team Activities
 - Packet inspection with `Wireshark`, `tcpdump`
@@ -59,11 +61,11 @@ Welcome to my personal cybersecurity home lab — a virtualized environment buil
 ## 🧰 Directory Structure
 
 ```
-/setup/                # VM configs, IPs, ISO details
-/attack-notes/         # Red team command logs, payloads, recon steps
-/defense-notes/        # Blue team logs, detections, scripts
-/screenshots/          # Proof of work
-/projects/             # Sub-projects like Pi-hole, Jellyfin, pfSense, etc.
+/Setup/                # VM configs, IPs, ISO details
+/Attack/               # Red team command logs, payloads, recon steps
+/Defense/              # Blue team logs, detections, scripts
+/Screenshots/          # Proof of work
+/Projects/             # Sub-projects like Pi-hole, Jellyfin, pfSense, etc.
 ```
 
 ---
