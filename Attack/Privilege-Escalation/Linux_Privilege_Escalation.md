@@ -1,8 +1,6 @@
 # 🔐 Linux Privilege Escalation – Writable Script & Cron Job
 > ⚠️ Disclaimer: This project is for **educational & documentation purposes**.I have created a vulnerability on VM which allows me to escalate Privileges. Do not use these techniques on systems you do not own or have explicit permission to test.
 
----
-
 ## 👤 Initial Setup – Create a Low-Privilege User
 
 Start by creating a non-privileged user to simulate a real-world scenario where an attacker does not have root access.
@@ -110,16 +108,8 @@ whoami
 
 ## ✅ Summary
 
+By simulating this misconfiguration, I was able to observe how linPEAS flags vulnerable cron scripts, understand how root-owned automation can be abused, and demonstrate a full local privilege escalation chain from a restricted user to root.
+
 - `linPEAS` helped identify a **writable root-owned cron script**
 - We exploited it by adding a **setuid bit to bash**
 - This enabled us to spawn a root shell with `/bin/bash -p`
-
----
-
-## 📁 Repo Contents
-
-| File | Description |
-|------|-------------|
-| `linpeas.sh` | Enumeration script |
-| `images/` | Screenshots from exploit process |
-| `README.md` | This documentation |
