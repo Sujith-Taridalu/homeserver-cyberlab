@@ -42,7 +42,7 @@ After switching to a **low-privileged user**, run the script:
 ./linpeas.sh
 ```
 
-![linPEAS working](../../Screenshots/Privilege-Escalations/linPEAS.png)
+![linPEAS working](../../screenshots/Privilege-Escalations/linPEAS.png)
 
 *Figure 1: linpeas working*
 
@@ -64,7 +64,7 @@ In this example, `linPEAS` flagged a **world-writable script** located at:
 /usr/local/bin/vuln_script.sh
 ```
 
-![linPEAS working](../../Screenshots/Privilege-Escalations/vuln.png)
+![linPEAS working](../../screenshots/Privilege-Escalations/vuln.png)
 
 *Figure 2: Vulnerability Detected*
 
@@ -100,7 +100,7 @@ whoami
 # root
 ```
 
-![PE to root](../../Screenshots/Privilege-Escalations/Output.png)
+![PE to root](../../screenshots/Privilege-Escalations/Output.png)
 
 *Figure 3: Successful escalation to Root*
 

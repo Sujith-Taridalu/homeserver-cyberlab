@@ -33,7 +33,7 @@ This user **does not** have administrative rights by default.
 ## 🔍 Enumeration with winPEAS
 We transferred and executed `winPEAS.exe` under the `sujit` account. During enumeration, it flagged the following:
 
-![winPEAS](../../Screenshots/Privilege-Escalations/Winpeas.png)
+![winPEAS](../../screenshots/Privilege-Escalations/Winpeas.png)
 
 *Figure 1: Running winPEAS.exe and finding a vulnerability*
 
@@ -94,9 +94,9 @@ msiexec /quiet /qn /i payload.msi
 ### ✅ Result:
 A new command prompt opens with SYSTEM privileges:
 
-![Exploited](../../Screenshots/Privilege-Escalations/output-win.png)
+![Exploited](../../screenshots/Privilege-Escalations/output-win.png)
 
-*Figure 1: New Command prompt with highest privilege*
+*Figure 2: New Command prompt with highest privilege*
 
 ```
 whoami
@@ -110,4 +110,3 @@ I successfully escalated privileges from a **low-privilege user** to **SYSTEM** 
 
 **Defensive Measure:**
 Ensure both HKLM and HKCU registry keys for AlwaysInstallElevated are set to `0`, and restrict local user access.
-

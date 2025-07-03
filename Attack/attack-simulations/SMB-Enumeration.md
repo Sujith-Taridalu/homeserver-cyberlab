@@ -149,7 +149,7 @@ put own.txt
 
 ![File Creation](../../screenshots/attack-simulation-7/file%20creation.png)
 
-*Figure 2: File Creation*
+*Figure 3: File Creation*
 
 ✅ The file uploaded successfully, proving that **unauthenticated users can write files** to the target system.
 
@@ -195,7 +195,7 @@ Owned this share!
 
 ![metasploitable2](../../screenshots/attack-simulation-7/msf.png)
 
-*Figure 4: Metasploitable2 machine*
+*Figure 5: Metasploitable2 machine*
 
 ✅ This verified that the file persisted on the system. **Write access over SMB was successfully exploited.**
 

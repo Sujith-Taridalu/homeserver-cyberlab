@@ -172,6 +172,3 @@ This simulation successfully demonstrates a **real-world applicable** command in
 - Gain foothold for further exploitation
 
 > ⚠️ Command Injection is classified as **CWE-77: Improper Neutralization of Special Elements used in a Command ('Command Injection')** and is one of the most severe vulnerabilities in web apps.
-
-**Simulation 5 complete and confirmed. ✅**
-

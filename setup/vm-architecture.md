@@ -99,5 +99,3 @@ All VMs share the same Proxmox virtual bridge: `vmbr0`, simulating a LAN.
 - Metasploitable2 was imported as a pre-built VM image (converted from VMDK to qcow2 for Proxmox, and then manually changing the configuration files).
 - Windows Server 2022 was installed from ISO, promoted to a Domain Controller, and configured for centralized authentication and DNS.
 - Windows 10 was successfully joined to the `win-server.local` domain, enabling GPO testing and domain-level authentication.
-
----

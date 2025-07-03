@@ -206,4 +206,3 @@ While this documentation covers the complete setup of a **Windows Server Active 
 
 ## 📝 **Final Summary**
 This documentation provides a complete, step-by-step guide to setting up **Active Directory** in a home lab, from Windows Server ISO installation to a functional domain with users, computers, and policies. Every decision is explained with its purpose and learning outcome, forming a solid foundation for further exploration.
-

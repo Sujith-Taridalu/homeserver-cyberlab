@@ -64,6 +64,3 @@ This document outlines the installation of **Proxmox Virtual Environment (VE)** 
 - **Open-source and powerful**: Supports KVM virtualization, LXC containers, and clustering.
 - **Web-based management**: Easy-to-use web GUI for managing VMs and resources.
 - **Perfect for home labs**: Scales well with available hardware, supports snapshots, backups, and bridged networking.
-
----
-

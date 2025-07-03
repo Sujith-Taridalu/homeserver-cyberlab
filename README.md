@@ -98,5 +98,3 @@ I'm Sujith, a cybersecurity learner building my home lab from the ground up to e
 > I break things, fix them, and document everything.
 
 Let’s connect on [LinkedIn](https://www.linkedin.com/) or [GitHub](https://github.com/).
-
----

@@ -175,7 +175,7 @@ Finally, now that we know the column names, we dump actual data using:
 
 ![Credentials](../../screenshots/attack-simulation-2/Credentials.png)
 
-*Figure 5: Credentials*
+*Figure 6: Credentials*
 
 These are MD5 hashes. Some common reversals:
 - `5f4dcc...` → `password`

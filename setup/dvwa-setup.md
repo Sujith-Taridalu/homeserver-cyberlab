@@ -129,5 +129,3 @@ DVWA setup involves configuring Apache, MySQL, and PHP to work together, securin
 - DVWA is intentionally insecure and should be used only in isolated labs.
 - Strong passwords are used even in the lab to simulate real-world practices.
 - This setup is foundational for practicing network scanning, enumeration, SQLi, XSS, and brute-force attacks.
-
----

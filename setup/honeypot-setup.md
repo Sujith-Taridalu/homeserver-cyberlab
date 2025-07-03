@@ -76,7 +76,7 @@ Check if it's running:
 bin/cowrie status
 ```
 
-![Cowrie bin Start and Status](../Screenshots/Honey%20pot/cowrie%20start%20&%20status.png)
+![Cowrie bin Start and Status](../screenshots/Honey%20pot/cowrie%20start%20&%20status.png)
 
 *Figure 1: Cowrie bin Start and Status*
 
@@ -111,9 +111,9 @@ To monitor logs in real time:
 tail -f /home/cowrie/cowrie/var/log/cowrie/cowrie.json
 ```
 
-![Cowrie Logs](../Screenshots/Honey%20pot/log.png)
+![Cowrie Logs](../screenshots/Honey%20pot/log.png)
 
-*Figure 2: Log*
+*Figure 2: Logs*
 
 Log events include:
 - Login attempts (successful/fake or failed)
@@ -128,5 +128,3 @@ Log events include:
 ```bash
 bin/cowrie stop
 ```
-
----
